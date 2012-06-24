@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsSample", "CqrsSample\CqrsSample.csproj", "{6AEAC931-65E1-4E96-A400-DE22E79B91C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsSample.Domain", "CqrsSample.Domain\CqrsSample.Domain.csproj", "{91CDC6A1-EA00-4824-85A2-DF673018EBCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsSample.EventHandlers", "CqrsSample.EventHandlers\CqrsSample.EventHandlers.csproj", "{341D2BA0-2613-4B7D-AE55-07D38C3DB00A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AEAC931-65E1-4E96-A400-DE22E79B91C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEAC931-65E1-4E96-A400-DE22E79B91C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEAC931-65E1-4E96-A400-DE22E79B91C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEAC931-65E1-4E96-A400-DE22E79B91C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91CDC6A1-EA00-4824-85A2-DF673018EBCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CDC6A1-EA00-4824-85A2-DF673018EBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CDC6A1-EA00-4824-85A2-DF673018EBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CDC6A1-EA00-4824-85A2-DF673018EBCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{341D2BA0-2613-4B7D-AE55-07D38C3DB00A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{341D2BA0-2613-4B7D-AE55-07D38C3DB00A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{341D2BA0-2613-4B7D-AE55-07D38C3DB00A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{341D2BA0-2613-4B7D-AE55-07D38C3DB00A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

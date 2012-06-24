@@ -1,0 +1,14 @@
+﻿@model CqrsSample.Models.CreateUserModel
+@{
+    ViewBag.Title = "CreateUser";
+}
+
+<h2>CreateUser</h2>
+@using(Html.BeginForm("Create","Users"))
+{
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name)
+    @Html.LabelFor(x => x.Password)
+    @Html.TextBoxFor(x => x.Password)
+    <input type="submit"/>
+}

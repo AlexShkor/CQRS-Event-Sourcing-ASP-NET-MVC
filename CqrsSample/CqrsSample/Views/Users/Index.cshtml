@@ -1,0 +1,26 @@
+﻿@using CqrsSample.Controllers
+@using CqrsSample.Models
+@model System.Collections.Generic.List<CqrsSample.EventHandlers.User>
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+
+<table>
+    <thead>
+        <th>
+            <td>Name</td>
+            <td>Change Password</td>
+        </th>
+    </thead>
+    <tbody>
+        @foreach(var user in Model)
+        {
+            @Html.Partial("ChangePassword", new ChangePasswordModel(user.Id))
+        }
+    </tbody>  
+</table>
+
+@Html.Partial("CreateUser", new CreateUserModel())
