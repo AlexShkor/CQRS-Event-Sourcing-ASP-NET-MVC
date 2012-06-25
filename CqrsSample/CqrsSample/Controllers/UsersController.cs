@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Authentication;
-using System.Web;
 using System.Web.Mvc;
 using CqrsSample.Domain.Comands;
 using CqrsSample.EventHandlers;
@@ -31,14 +28,7 @@ namespace CqrsSample.Controllers
                               OldPassword = model.OldPassword,
                               UserId = model.UserId
                           };
-            try
-            {
-                Send(cmd);
-            }
-            catch (AuthenticationException)
-            {
-                return Content("Invalid password.");
-            }
+            Send(cmd);
             return RedirectToAction("Index");
         }
 
