@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Authentication;
 using System.Web;
 using System.Web.Mvc;
 using CqrsSample.Domain.Comands;
@@ -30,7 +31,14 @@ namespace CqrsSample.Controllers
                               OldPassword = model.OldPassword,
                               UserId = model.UserId
                           };
-            Send(cmd);
+            try
+            {
+                Send(cmd);
+            }
+            catch (AuthenticationException)
+            {
+                return Content("Invalid password.");
+            }
             return RedirectToAction("Index");
         }
 
@@ -41,7 +49,7 @@ namespace CqrsSample.Controllers
                 Name = model.Name,
                 Password = model.Password,
                 UserId = Guid.NewGuid().ToString()
-            };
+            };       
             Send(cmd);
             return RedirectToAction("Index");
         }

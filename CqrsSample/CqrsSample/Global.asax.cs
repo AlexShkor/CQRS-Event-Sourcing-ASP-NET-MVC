@@ -56,6 +56,7 @@ namespace CqrsSample
                 .MemorySynchronousTransport()
                 .SetName("Main  Service Bus")
                 .SetInputQueue("sync.server")
+                .SetErrorQueue("error.server")
                 .AddEndpoint(type => type.FullName.EndsWith("Event"), "sync.server")
                 .AddEndpoint(type => type.FullName.EndsWith("Command"), "sync.server")
                 .AddEndpoint(type => type.FullName.EndsWith("Message"), "sync.server")

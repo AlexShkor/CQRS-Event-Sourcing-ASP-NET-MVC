@@ -10,15 +10,22 @@
 
 <table>
     <thead>
-        <th>
+        <tr>
             <td>Name</td>
             <td>Change Password</td>
-        </th>
+        <tr/>
     </thead>
-    <tbody>
+    <tbody >
         @foreach(var user in Model)
         {
-            @Html.Partial("ChangePassword", new ChangePasswordModel(user.Id))
+            <tr>
+                <td>
+                   <strong>@user.Name</strong> 
+                </td>
+                <td>
+                    @Html.Partial("ChangePassword", new ChangePasswordModel(user.Id))
+                </td>
+            </tr>
         }
     </tbody>  
 </table>
