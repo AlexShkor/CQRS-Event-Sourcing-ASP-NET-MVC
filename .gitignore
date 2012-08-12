@@ -1,2 +1,10 @@
 
 /CqrsSample/_ReSharper.CqrsSample
+/CqrsSample/CqrsSample.Domain/obj
+/CqrsSample/CqrsSample.Domain/bin
+/CqrsSample/CqrsSample.Infrastructure/bin
+/CqrsSample/CqrsSample.Infrastructure/obj
+/CqrsSample/CqrsSample.EventHandlers/obj
+/CqrsSample/CqrsSample.EventHandlers/bin
+/CqrsSample/CqrsSample/bin
+/CqrsSample/CqrsSample/obj
