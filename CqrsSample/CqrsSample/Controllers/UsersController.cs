@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using CqrsSample.Domain.Comands;
+using CqrsSample.Domain.User.Comands;
 using CqrsSample.EventHandlers;
 using CqrsSample.Models;
 

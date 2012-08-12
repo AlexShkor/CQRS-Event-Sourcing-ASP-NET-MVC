@@ -1,6 +1,6 @@
 ﻿using Paralect.Domain;
 
-namespace CqrsSample.Domain.Events
+namespace CqrsSample.Domain.User.Events
 {
     public class User_Password_ChangedEvent: Event
     {

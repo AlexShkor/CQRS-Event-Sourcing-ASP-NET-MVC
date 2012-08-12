@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using CqrsSample.Domain.Events;
+using CqrsSample.Domain.User.Events;
 using Paralect.ServiceBus;
 
 namespace CqrsSample.EventHandlers

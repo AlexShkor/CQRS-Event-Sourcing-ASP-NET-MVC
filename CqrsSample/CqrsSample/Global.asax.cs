@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using CqrsSample.Domain;
+using CqrsSample.Domain.EventStore;
+using CqrsSample.Domain.Snapshots;
+using CqrsSample.Domain.User;
 using CqrsSample.EventHandlers;
 using Paralect.Domain;
 using Paralect.Domain.EventBus;
@@ -13,6 +16,7 @@ using Paralect.ServiceBus.Dispatching;
 using Paralect.ServiceLocator.StructureMap;
 using Paralect.Transitions;
 using StructureMap;
+using ISnapshotRepository = Paralect.Transitions.ISnapshotRepository;
 
 namespace CqrsSample
 {
@@ -76,12 +80,15 @@ namespace CqrsSample
             var transitionsRepository = new InMemoryTransitionRepository();
 
             var transitionsStorage = new TransitionStorage(transitionsRepository);
+            var snapshotRepository = new InMemorySnapshotRepository();
 
             container.Configure(config =>
             {
                 config.For<ITransitionRepository>().Singleton().Use(transitionsRepository);
                 config.For<ITransitionStorage>().Singleton().Use(transitionsStorage);
+                config.For<CqrsSample.Domain.Snapshots.ISnapshotRepository>().Singleton().Use(snapshotRepository);
                 config.For<IDataTypeRegistry>().Singleton().Use(dataTypeRegistry);
+                config.For<IEventStore>().Use<EventStore>();
                 config.For<IEventBus>().Use<ParalectServiceBusEventBus>();
                 config.For<IRepository>().Use<Repository>();
                 config.For<ICommandService>().Use<CommandService>();

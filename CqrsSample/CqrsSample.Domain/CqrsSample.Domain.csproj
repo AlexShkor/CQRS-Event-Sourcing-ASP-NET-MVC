@@ -37,6 +37,7 @@
     <Reference Include="Paralect.ServiceBus">
       <HintPath>..\libs\Paralect\Paralect.ServiceBus.dll</HintPath>
     </Reference>
+    <Reference Include="Paralect.Transitions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,13 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseAR.cs" />
-    <Compile Include="Comands\User_ChangePasswordCommand.cs" />
-    <Compile Include="Comands\User_CreateCommand.cs" />
-    <Compile Include="Events\User_CreatedEvent.cs" />
-    <Compile Include="Events\User_Password_ChangedEvent.cs" />
+    <Compile Include="User\Comands\User_ChangePasswordCommand.cs" />
+    <Compile Include="User\Comands\User_CreateCommand.cs" />
+    <Compile Include="User\Comands\User_RenameCommand.cs" />
+    <Compile Include="EventStore\EventStore.cs" />
+    <Compile Include="EventStore\IEventStore.cs" />
+    <Compile Include="User\Events\User_CreatedEvent.cs" />
+    <Compile Include="User\Events\User_Password_ChangedEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserAR.cs" />
+    <Compile Include="Snapshots\InMemorySnapshotRepository.cs" />
+    <Compile Include="Snapshots\Snapshot.cs" />
+    <Compile Include="Snapshots\ISnapshotRepository.cs" />
+    <Compile Include="User\UserAR.cs" />
+    <Compile Include="User\UserCommandHandler.cs" />
+    <Compile Include="User\UserState.cs" />
+    <Compile Include="User\Events\User_RenamedEvent.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
