@@ -1,7 +1,7 @@
 ﻿using System;
-using CqrsSample.Domain.EventStore;
-using CqrsSample.Domain.Snapshots;
 using CqrsSample.Domain.User.Comands;
+using CqrsSample.Infrastructure.EventStore;
+using CqrsSample.Infrastructure.Snapshots;
 using Paralect.ServiceBus;
 
 namespace CqrsSample.Domain.User

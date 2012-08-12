@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Security.Authentication;
-using CqrsSample.Domain.Snapshots;
 using CqrsSample.Domain.User.Events;
+using CqrsSample.Infrastructure.Snapshots;
 using Paralect.Domain;
 using Paralect.Transitions;
 

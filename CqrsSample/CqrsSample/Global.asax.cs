@@ -5,10 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using CqrsSample.Domain;
-using CqrsSample.Domain.EventStore;
-using CqrsSample.Domain.Snapshots;
 using CqrsSample.Domain.User;
 using CqrsSample.EventHandlers;
+using CqrsSample.Infrastructure.EventStore;
+using CqrsSample.Infrastructure.Snapshots;
 using Paralect.Domain;
 using Paralect.Domain.EventBus;
 using Paralect.ServiceBus;
@@ -86,7 +86,7 @@ namespace CqrsSample
             {
                 config.For<ITransitionRepository>().Singleton().Use(transitionsRepository);
                 config.For<ITransitionStorage>().Singleton().Use(transitionsStorage);
-                config.For<CqrsSample.Domain.Snapshots.ISnapshotRepository>().Singleton().Use(snapshotRepository);
+                config.For<CqrsSample.Infrastructure.Snapshots.ISnapshotRepository>().Singleton().Use(snapshotRepository);
                 config.For<IDataTypeRegistry>().Singleton().Use(dataTypeRegistry);
                 config.For<IEventStore>().Use<EventStore>();
                 config.For<IEventBus>().Use<ParalectServiceBusEventBus>();

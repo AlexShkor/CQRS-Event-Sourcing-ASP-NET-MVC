@@ -170,6 +170,10 @@
       <Project>{341D2BA0-2613-4B7D-AE55-07D38C3DB00A}</Project>
       <Name>CqrsSample.EventHandlers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CqrsSample.Infrastructure\CqrsSample.Infrastructure.csproj">
+      <Project>{2453441A-F491-4544-9F94-2F777BF9ABE7}</Project>
+      <Name>CqrsSample.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Users\Index.cshtml" />
