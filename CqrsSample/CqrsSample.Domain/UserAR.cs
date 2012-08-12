@@ -17,7 +17,6 @@ namespace CqrsSample.Domain
         public UserAR(string userId, string name, string password, ICommandMetadata metadata)
             : this()
         {
-            _id = userId;
             SetCommandMetadata(metadata);
             Apply(new User_CreatedEvent
             {
